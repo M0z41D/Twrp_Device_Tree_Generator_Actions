@@ -29,7 +29,10 @@ jobs:
       - name: Required package Install
         run: sudo apt-get install wget cpio
       - name: Stock ROM Files Downalod
-        run: aria2c "${{ github.event.inputs.IMG_URL }}" ls
+        run: |
+        aria2c "${{ github.event.inputs.IMG_URL }}"
+        ls
+      
       - name: TWRP Device Tree Generate
         run: |
          ls
