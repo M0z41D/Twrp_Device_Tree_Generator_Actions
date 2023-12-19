@@ -27,9 +27,13 @@ jobs:
       - run: python -m pip install twrpdtgen
       - uses: actions/checkout@v2    
       - name: Required package Install
-        run: sudo apt-get install wget cpio
+        run: |
+          sudo apt-get install wget cpio
+        
       - name: Stock ROM Files Downalod
-        run: aria2c "${{ github.event.inputs.ZIP_URL }}"
+        run: |
+          aria2c "${{ github.event.inputs.IMG_URL }}"
+          ls
       
       - name: TWRP Device Tree Generate
         run: |
