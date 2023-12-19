@@ -32,8 +32,7 @@ jobs:
         run: |
         aria2c "${{ github.event.inputs.IMG_URL }}"
         ls
-      
-      - name: TWRP Device Tree Generate
+       - name: TWRP Device Tree Generate
         run: |
          ls
          python -m twrpdtgen boot.img
