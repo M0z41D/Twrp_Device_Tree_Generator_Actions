@@ -12,7 +12,7 @@ on:
       url:
         description: 'Stock ROM Url'     
         required: true
-        default: 'None'
+        default: 'https://onboardcloud.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/HyperOS-WEEKLY-RELEASES/OS1.0.23.12.11.DEV/xiaomi.eu_multi_XM12Pro_OS1.0.23.12.11.DEV_os1-14.zip'
 
 jobs:
   Generate:
