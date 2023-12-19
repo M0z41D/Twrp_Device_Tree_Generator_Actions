@@ -32,7 +32,7 @@ jobs:
         
       - name: Stock ROM Files Downalod
         run: |
-          aria2c "${{ github.event.inputs.ROM_URL }}"
+          wget "${{ github.event.inputs.ROM_URL }}"
       
       - name: TWRP Device Tree Generate
         run: |
