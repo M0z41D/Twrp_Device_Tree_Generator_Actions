@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'Stock ROM Url'     
+        description: 'ROM_URL'     
         required: true
         default: 'https://onboardcloud.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/HyperOS-WEEKLY-RELEASES/OS1.0.23.12.11.DEV/xiaomi.eu_multi_XM12Pro_OS1.0.23.12.11.DEV_os1-14.zip'
 
@@ -32,7 +32,7 @@ jobs:
         
       - name: Stock ROM Files Downalod
         run: |
-          wget "${{ github.event.inputs.ZIP_URL }}"
+          aria2c "${{ github.event.inputs.ROM_URL }}"
       
       - name: TWRP Device Tree Generate
         run: |
